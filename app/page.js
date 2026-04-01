@@ -9,38 +9,55 @@ const COLORS = ["#3b82f6","#10b981","#f59e0b","#ef4444","#8b5cf6","#ec4899","#06
 
 // ===== DATA =====
 const initialEmployees = [
-  { id:1, name:"Errol Verwey", role:"Directie / Technologie", startDate:"1999", avatar:"EV" },
-  { id:2, name:"Nielkamal Kalpoe", role:"Kadastrale Metingen / Juridisch", startDate:"2005", avatar:"NK" },
-  { id:3, name:"Landmeter 1", role:"Veldwerker", startDate:"2020", avatar:"L1" },
-  { id:4, name:"Landmeter 2", role:"Veldwerker", startDate:"2022", avatar:"L2" },
-  { id:5, name:"Admin Medewerker", role:"Administratie", startDate:"2021", avatar:"AM" },
+  { id:1, name:"Niel Kalpoe", role:"Directie / Admin Staff", email:"director@ensunv.com", lastLogin:"3 uur geleden", avatar:"NK" },
+  { id:2, name:"Irshaad Fatehmahomed", role:"Admin Staff", email:"office@ensunv.com", lastLogin:"5 uur geleden", avatar:"IF" },
+  { id:3, name:"Maria Roopnarine", role:"Admin Staff", email:"mroopnarine.ensunv@gmail.com", lastLogin:"5 uur geleden", avatar:"MR" },
+  { id:4, name:"Priya Kedar", role:"Finance", email:"finance@ensunv.com", lastLogin:"5 uur geleden", avatar:"PK" },
+  { id:5, name:"Walinda Lingard", role:"Teken Kamer", email:"wlingard436.ensunv@gmail.com", lastLogin:"32 min geleden", avatar:"WL" },
+  { id:6, name:"Evani Esperance", role:"Teken Kamer", email:"evaniesperance.ensunv@gmail.com", lastLogin:"Gisteren", avatar:"EE" },
+  { id:7, name:"Simone Soesanna", role:"Teken Kamer", email:"s.soesanna.ensunv@gmail.com", lastLogin:"Gisteren", avatar:"SS" },
+  { id:8, name:"Shanita Sital", role:"Teken Kamer", email:"shsital.ensunv@gmail.com", lastLogin:"2 dagen geleden", avatar:"ShS" },
+  { id:9, name:"Tanisha Sewradj", role:"Teken Kamer", email:"tsewradj.ensunv@gmail.com", lastLogin:"5 uur geleden", avatar:"TS" },
+  { id:10, name:"Jojo Castillo", role:"Teken Kamer", email:"surveyor.ensunv@gmail.com", lastLogin:"7 dagen geleden", avatar:"JC" },
+  { id:11, name:"Jonathan Sandie", role:"Teken Kamer", email:"jsandie.ensunv@gmail.com", lastLogin:"7 dagen geleden", avatar:"JS" },
+  { id:12, name:"Manisha Ramharakh", role:"Teken Kamer", email:"manisharamharakh7.ensunv@gmail.com", lastLogin:"Een week geleden", avatar:"MaR" },
+  { id:13, name:"Santusha Sital", role:"Admin Staff", email:"s.sital.ensunv@gmail.com", lastLogin:"5 dagen geleden", avatar:"SaS" },
+  { id:14, name:"Kenscky Alimoestar", role:"Consultant / PM", email:"alimoestar@gmail.com", lastLogin:"56 min geleden", avatar:"KA" },
 ];
 
 const initialEvaluations = [
-  { id:1, employeeId:1, period:"Maart 2026", perfexAdoptie:85, takenAfgerond:12, takenOpen:3, urenGelogd:38, kwaliteit:8, samenwerking:9, perfexGebruik:7, opmerkingen:"Goed overzicht, stuurt team aan." },
-  { id:2, employeeId:2, period:"Maart 2026", perfexAdoptie:78, takenAfgerond:15, takenOpen:5, urenGelogd:42, kwaliteit:9, samenwerking:8, perfexGebruik:6, opmerkingen:"Uitstekende vakkennis, Perfex kan beter." },
-  { id:3, employeeId:3, period:"Maart 2026", perfexAdoptie:60, takenAfgerond:18, takenOpen:7, urenGelogd:44, kwaliteit:7, samenwerking:7, perfexGebruik:5, opmerkingen:"Vergeet regelmatig uren te loggen." },
-  { id:4, employeeId:4, period:"Maart 2026", perfexAdoptie:45, takenAfgerond:14, takenOpen:9, urenGelogd:30, kwaliteit:6, samenwerking:6, perfexGebruik:3, opmerkingen:"Extra training nodig voor Perfex mobiel." },
-  { id:5, employeeId:5, period:"Maart 2026", perfexAdoptie:92, takenAfgerond:22, takenOpen:2, urenGelogd:40, kwaliteit:8, samenwerking:8, perfexGebruik:9, opmerkingen:"Beste Perfex-gebruiker van het team." },
+  { id:1, employeeId:1, period:"Maart 2026", perfexAdoptie:88, takenAfgerond:15, takenOpen:3, urenGelogd:40, kwaliteit:9, samenwerking:9, perfexGebruik:8, opmerkingen:"Actief in Perfex, stuurt team aan vanuit directie." },
+  { id:2, employeeId:2, period:"Maart 2026", perfexAdoptie:82, takenAfgerond:20, takenOpen:4, urenGelogd:42, kwaliteit:8, samenwerking:8, perfexGebruik:7, opmerkingen:"Betrouwbaar op kantoor, goed met facturatie." },
+  { id:3, employeeId:3, period:"Maart 2026", perfexAdoptie:80, takenAfgerond:18, takenOpen:3, urenGelogd:40, kwaliteit:8, samenwerking:8, perfexGebruik:7, opmerkingen:"Consistent gebruik Perfex voor admin taken." },
+  { id:4, employeeId:4, period:"Maart 2026", perfexAdoptie:85, takenAfgerond:22, takenOpen:2, urenGelogd:40, kwaliteit:9, samenwerking:8, perfexGebruik:8, opmerkingen:"Finance module goed onder de knie." },
+  { id:5, employeeId:5, period:"Maart 2026", perfexAdoptie:92, takenAfgerond:25, takenOpen:1, urenGelogd:44, kwaliteit:9, samenwerking:9, perfexGebruik:9, opmerkingen:"Beste Perfex-gebruiker, zeer actief." },
+  { id:6, employeeId:6, period:"Maart 2026", perfexAdoptie:70, takenAfgerond:16, takenOpen:5, urenGelogd:38, kwaliteit:7, samenwerking:7, perfexGebruik:6, opmerkingen:"Goede voortgang, meer uren loggen." },
+  { id:7, employeeId:7, period:"Maart 2026", perfexAdoptie:68, takenAfgerond:14, takenOpen:6, urenGelogd:36, kwaliteit:7, samenwerking:7, perfexGebruik:6, opmerkingen:"Groeit in Perfex gebruik, gisteren actief." },
+  { id:8, employeeId:10, period:"Maart 2026", perfexAdoptie:45, takenAfgerond:10, takenOpen:8, urenGelogd:28, kwaliteit:6, samenwerking:6, perfexGebruik:4, opmerkingen:"7 dagen niet ingelogd, opvolging nodig." },
+  { id:9, employeeId:11, period:"Maart 2026", perfexAdoptie:42, takenAfgerond:9, takenOpen:9, urenGelogd:26, kwaliteit:6, samenwerking:6, perfexGebruik:3, opmerkingen:"7 dagen niet ingelogd, extra training nodig." },
+  { id:10, employeeId:14, period:"Maart 2026", perfexAdoptie:95, takenAfgerond:30, takenOpen:5, urenGelogd:45, kwaliteit:9, samenwerking:9, perfexGebruik:10, opmerkingen:"Consultant/PM - monitort alles, topgebruiker." },
 ];
 
 const initialProblems = [
-  { id:1, title:"Veldwerkers loggen uren niet consistent", category:"Perfex Adoptie", severity:"Hoog", status:"Open", assignee:"Ken", created:"2026-03-15", description:"Landmeter 1 en 2 vergeten regelmatig timer te starten/stoppen." },
-  { id:2, title:"Stagnatie kadastraal project Commewijne", category:"Stagnatie", severity:"Hoog", status:"In behandeling", assignee:"Errol Verwey", created:"2026-03-20", description:"Meting loopt 5 dagen achter door weer en terrein." },
-  { id:3, title:"Facturen >30 dagen onbetaald (3 klanten)", category:"Financieel", severity:"Medium", status:"Open", assignee:"Admin Medewerker", created:"2026-03-22", description:"Drie facturen staan >30 dagen open." },
-  { id:4, title:"Perfex notificaties niet op mobiel", category:"Technisch", severity:"Medium", status:"Open", assignee:"Ken", created:"2026-03-25", description:"Push-notificaties komen niet door op Android." },
-  { id:5, title:"Website ensunv.com verouderd", category:"Digitalisering", severity:"Laag", status:"Gepland", assignee:"Ken", created:"2026-03-28", description:"Website vernieuwen met Next.js. Gepland Q2." },
+  { id:1, title:"Teken Kamer medewerkers loggen uren niet consistent", category:"Perfex Adoptie", severity:"Hoog", status:"Open", assignee:"Kenscky Alimoestar", created:"2026-03-15", description:"Jojo Castillo en Jonathan Sandie al 7 dagen niet ingelogd." },
+  { id:2, title:"Stagnatie kadastraal project Commewijne", category:"Stagnatie", severity:"Hoog", status:"In behandeling", assignee:"Niel Kalpoe", created:"2026-03-20", description:"Meting loopt 5 dagen achter door weer en terrein." },
+  { id:3, title:"Facturen >30 dagen onbetaald (3 klanten)", category:"Financieel", severity:"Medium", status:"Open", assignee:"Priya Kedar", created:"2026-03-22", description:"Drie facturen staan >30 dagen open, opvolging via finance." },
+  { id:4, title:"Perfex notificaties niet op mobiel", category:"Technisch", severity:"Medium", status:"Open", assignee:"Kenscky Alimoestar", created:"2026-03-25", description:"Push-notificaties komen niet door op Android voor buitendienst." },
+  { id:5, title:"Website ensunv.com verouderd", category:"Digitalisering", severity:"Laag", status:"Gepland", assignee:"Kenscky Alimoestar", created:"2026-03-28", description:"Website vernieuwen met Next.js. Gepland Q2." },
+  { id:6, title:"Manisha Ramharakh een week niet actief", category:"Perfex Adoptie", severity:"Medium", status:"Open", assignee:"Kenscky Alimoestar", created:"2026-03-30", description:"Teken Kamer medewerker al een week niet ingelogd in Perfex." },
 ];
 
 const initialTasks = [
-  { id:1, title:"Weekrapport genereren (Week 14)", project:"Perfex CRM Implementatie", assignee:"Ken", priority:"Hoog", status:"Te doen", deadline:"2026-04-04", type:"Rapport" },
-  { id:2, title:"Training: facturen in Perfex", project:"Perfex CRM Implementatie", assignee:"Ken", priority:"Hoog", status:"Te doen", deadline:"2026-04-01", type:"Training" },
-  { id:3, title:"Kadastrale meting perceel #487", project:"Kadaster Paramaribo Q2", assignee:"Landmeter 1", priority:"Hoog", status:"In uitvoering", deadline:"2026-04-07", type:"Veldwerk" },
-  { id:4, title:"Hoogtemetingen bouwproject Rainville", project:"Civiel Rainville", assignee:"Landmeter 2", priority:"Medium", status:"In uitvoering", deadline:"2026-04-10", type:"Veldwerk" },
-  { id:5, title:"Expertise rapport grensgeschil #12", project:"Juridisch 2026", assignee:"Nielkamal Kalpoe", priority:"Hoog", status:"Review", deadline:"2026-04-03", type:"Rapport" },
-  { id:6, title:"3 facturen versturen", project:"Administratie", assignee:"Admin Medewerker", priority:"Medium", status:"Te doen", deadline:"2026-04-02", type:"Financieel" },
-  { id:7, title:"Stagnatie-scan taken >3 dagen", project:"Perfex CRM Implementatie", assignee:"Ken", priority:"Hoog", status:"Te doen", deadline:"Dagelijks", type:"Monitoring" },
-  { id:8, title:"Website wireframes ontwerpen", project:"Digitalisering ENSU", assignee:"Ken", priority:"Laag", status:"Gepland", deadline:"2026-05-01", type:"Ontwikkeling" },
+  { id:1, title:"Weekrapport genereren (Week 14)", project:"Perfex CRM Implementatie", assignee:"Kenscky Alimoestar", priority:"Hoog", status:"Te doen", deadline:"2026-04-04", type:"Rapport" },
+  { id:2, title:"Training: facturen in Perfex", project:"Perfex CRM Implementatie", assignee:"Kenscky Alimoestar", priority:"Hoog", status:"Te doen", deadline:"2026-04-01", type:"Training" },
+  { id:3, title:"Kadastrale meting perceel #487", project:"Kadaster Paramaribo Q2", assignee:"Walinda Lingard", priority:"Hoog", status:"In uitvoering", deadline:"2026-04-07", type:"Veldwerk" },
+  { id:4, title:"Hoogtemetingen bouwproject Rainville", project:"Civiel Rainville", assignee:"Tanisha Sewradj", priority:"Medium", status:"In uitvoering", deadline:"2026-04-10", type:"Veldwerk" },
+  { id:5, title:"Expertise rapport grensgeschil #12", project:"Juridisch 2026", assignee:"Niel Kalpoe", priority:"Hoog", status:"Review", deadline:"2026-04-03", type:"Rapport" },
+  { id:6, title:"3 facturen versturen + opvolging", project:"Administratie", assignee:"Priya Kedar", priority:"Medium", status:"Te doen", deadline:"2026-04-02", type:"Financieel" },
+  { id:7, title:"Stagnatie-scan taken >3 dagen", project:"Perfex CRM Implementatie", assignee:"Kenscky Alimoestar", priority:"Hoog", status:"Te doen", deadline:"Dagelijks", type:"Monitoring" },
+  { id:8, title:"Website wireframes ontwerpen", project:"Digitalisering ENSU", assignee:"Kenscky Alimoestar", priority:"Laag", status:"Gepland", deadline:"2026-05-01", type:"Ontwikkeling" },
+  { id:9, title:"Opvolging inactieve Teken Kamer", project:"Perfex CRM Implementatie", assignee:"Kenscky Alimoestar", priority:"Hoog", status:"Te doen", deadline:"2026-04-02", type:"Monitoring" },
+  { id:10, title:"Office administratie digitaliseren", project:"Administratie", assignee:"Irshaad Fatehmahomed", priority:"Medium", status:"In uitvoering", deadline:"2026-04-15", type:"Administratie" },
 ];
 
 const weeklyAdoption = [
@@ -59,10 +76,11 @@ const projectStatus = [
 ];
 
 const urenPerRol = [
-  { rol:"Veldwerk", uren:88, target:80 },
-  { rol:"Administratie", uren:40, target:40 },
-  { rol:"Directie", uren:38, target:40 },
-  { rol:"Consultant", uren:18, target:20 },
+  { rol:"Teken Kamer", uren:220, target:280 },
+  { rol:"Admin Staff", uren:120, target:120 },
+  { rol:"Finance", uren:80, target:80 },
+  { rol:"Directie", uren:40, target:40 },
+  { rol:"Consultant/PM", uren:45, target:40 },
 ];
 
 // ===== REDUCER =====
